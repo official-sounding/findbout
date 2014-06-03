@@ -1,0 +1,5 @@
+.idea/
+.gradle/
+findbout.iml
+out/
+config.yml
