@@ -27,6 +27,7 @@ public interface BoutDAO {
             "join team as home on home.id = home_team_id "+
             "join team as away on away.id = away_team_id "+
             "WHERE earth_distance(ll_to_earth(:lat, :lng), ll_to_earth(home.lat, home.lng)) <= :dist "+
+            "AND date >= current_date "+
             "ORDER BY distance_from_current_location, date ASC LIMIT 100")
     List<Bout> getPrecise(@Bind("lat") double lat, @Bind("lng") double lng, @Bind("dist") double dist);
 }

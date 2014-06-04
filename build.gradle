@@ -10,7 +10,7 @@ targetCompatibility = '1.7'
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 // The main class of the application
-mainClassName = 'com.example.helloworld.HelloWorldService'
+mainClassName = 'com.officialsounding.findbout.FindBoutService'
 
 // Add Gradle OneJar Plugin, see https://github.com/rholder/gradle-one-jar
 buildscript {
@@ -47,7 +47,7 @@ task oneJar(type: OneJar) {
 
 // Configure the run task to start the Dropwizard service
 run {
-    args 'server', './src/dist/config/helloworld.yml'
+    args 'server', './src/dist/config/config.yml'
 
 }
 

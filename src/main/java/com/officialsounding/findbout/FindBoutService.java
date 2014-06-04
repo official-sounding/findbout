@@ -20,7 +20,7 @@ public class FindBoutService extends Service<FindBoutConfiguration> {
     @Override
     public void initialize(Bootstrap<FindBoutConfiguration> bootstrap) {
         bootstrap.setName("findbout");
-        bootstrap.addBundle(new AssetsBundle("/static/", "/"));
+        bootstrap.addBundle(new AssetsBundle("/static/", "/","index.html"));
         bootstrap.addBundle(new DBIExceptionsBundle());
     }
 
