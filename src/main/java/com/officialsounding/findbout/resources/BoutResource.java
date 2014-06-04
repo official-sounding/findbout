@@ -29,7 +29,8 @@ public class BoutResource {
 
     @GET
     @Path("precise")
-    public List<Bout> getBoutsPrecise(@QueryParam("lat") double lat, @QueryParam("lng") double lng) {
-        return boutDAO.getPrecise(lat,lng);
+    public List<Bout> getBoutsPrecise(@QueryParam("lat") double lat, @QueryParam("lng") double lng, @QueryParam("dist") int miles) {
+        double meters = miles * 1609;
+        return boutDAO.getPrecise(lat,lng,meters);
     }
 }

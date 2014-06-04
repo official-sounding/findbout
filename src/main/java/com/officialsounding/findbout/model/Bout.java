@@ -8,6 +8,7 @@ public class Bout {
     private Team away;
     private LocalDate date;
     private String sanctionedBy;
+    private double distanceMeters;
 
     public Team getHome() {
         return home;
@@ -39,5 +40,17 @@ public class Bout {
 
     public void setSanctionedBy(String sanctionedBy) {
         this.sanctionedBy = sanctionedBy;
+    }
+
+    public double getDistanceMeters() {
+        return distanceMeters;
+    }
+
+    public void setDistanceMeters(double distanceMeters) {
+        this.distanceMeters = distanceMeters;
+    }
+
+    public double getDistanceMiles() {
+        return distanceMeters * 0.00062137;
     }
 }
